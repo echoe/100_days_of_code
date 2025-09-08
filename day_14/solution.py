@@ -5,7 +5,7 @@ import random
 -I initially thought that I was actually going to have to make an instagram developer account. But it gives you basically mock API output. Oops
 -I set myguess to catch uppercase letters and not catch any type of letter. [Not fully wrong, but YMMV.]
 -The game repeats the second option when the user gets it right, so you need to pull from the previous guess.
--I just have to take it slower.
+-I just have to take it slower. I have so much experience that it's easy to skip steps, but I'm sure that will make things further on harder.
 -Also, note this needs to be in the same folder as an art and game_data file holding that data in order to work. I am not copying those imports here."""
 person_b = random.choice(data)
 right = True
