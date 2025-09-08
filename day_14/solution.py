@@ -5,21 +5,26 @@ import random
 -I initially thought that I was actually going to have to make an instagram developer account. But it gives you basically mock API output. Oops
 -I set myguess to catch uppercase letters and not catch any type of letter. [Not fully wrong, but YMMV.]
 -The game repeats the second option when the user gets it right, so you need to pull from the previous guess.
--I just have to take it slower. I have so much experience that it's easy to skip steps, but I'm sure that will make things further on harder.
--Also, note this needs to be in the same folder as an art and game_data file holding that data in order to work. I am not copying those imports here."""
+-Check if the first and second random options are the same.
+-I just have to take it slower. The "correct solution" has an additional function but I don't think that's needed for this program.
+-Also, note this needs to be in the same folder as the sample stuff in order to work. I am not copying those imports here."""
 person_b = random.choice(data)
 right = True
 score = 0
 print(logo)
+
 while right:
-    person_a = person_b #Fis line 1
-    person_b = random.choice(data) # Fix line 2
+    person_a = person_b
+    person_b = random.choice(data)
+    while person_a == person_b:
+        person_b = random.choice(data)
     print(f"Compare A: {person_a["name"]}, a {person_a["description"]}, from {person_a["country"]}."
           f"{vs}"
           f"Against B: {person_b["name"]}, a {person_b["description"]}, from {person_b["country"]}.")
     myguess = input("Who has more followers? Type 'A' or 'B':   ").lower()
-    if person_a["follower_count"] > person_b["follower_count"] and myguess == "a":
+    if check_correct(person_a["follower_count"], person_b["follower_count"], myguess):
         score += 1
+        print("\n" * 20, logo)
         print(f"You're right! Current score: {score}")
     elif person_b["follower_count"] > person_a["follower_count"] and myguess == "b":
         score += 1
