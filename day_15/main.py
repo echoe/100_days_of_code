@@ -1,10 +1,21 @@
 """
-A coffee machine! Wowee
+A coffee machine! Wowee.
+What I missed here is all incidental, so I'm not adding a new file for it. But here are the differences:
+- I did not use fstrings to print sometimes. Eh.
+- My function names are different. I think they're very logical though.
+- My variable names are different, and sometimes they're not fully clear. That's something to note.
+- I think my resource check is actually better, since I check all resources before returning the result.
+- I made the coins floats instead of integers.
+(Everything gets rounded to 2 places so in this use it doesn't matter, just something to note.)
+- I did not make functions for checking if the transaction was successful or converting the coins into cash.
+- I think this is fine as well: the example code is a little cleaner, but not egregiously so. And I don't have to call a global.
+- I also rounded to 3 places instead of 2 because my machine seems to always need that to display properly. YMMV.
+- My make_coffee function only takes in an order, because you can pull the ingredients from the menu without an input.
 """
 
 # Prompt user by asking "What would you like? (espresso/latte/cappuccino):"
 # Check user's input to decide what to do next
-# TODO: The prompt should show every time action has completed (eg when the drink is dispensed)
+# The prompt should show every time action has completed (eg when the drink is dispensed)
 # Turn off the Coffee Machine by entering "off" into the prompt.
 # Print report.
 # Check resources sufficient?
