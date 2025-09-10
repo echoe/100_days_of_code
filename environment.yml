@@ -1,0 +1,7 @@
+# Conda env file to build and update environment as needed.
+name: hundred_day_challenge_env
+dependencies:
+  - python=3.12
+  - pip # install pip in env
+  - pip: # Include pip dependencies last
+    - prettytable
