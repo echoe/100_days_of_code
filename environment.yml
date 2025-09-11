@@ -5,3 +5,4 @@ dependencies:
   - pip # install pip in env
   - pip: # Include pip dependencies last
     - prettytable
+    - requests
