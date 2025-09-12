@@ -15,7 +15,7 @@ def get_new_questions():
     response = requests.get(opentdb_api_url)
     try:
         return response.json()['results']
-    except Error:
+    except:
         exit("There was an error pulling new questions! Sorry.")
 
 newquestions = input("Would you like to get random new questions? Type 'y' to get new questions.")
@@ -36,4 +36,4 @@ for question in question_data:
 quiz = QuizBrain(question_bank)
 while quiz.still_has_questions():
     quiz.next_question()
-print(f"You've completed the quiz\nYour final score was: {quiz.score}/{quiz.question_number}")
+print(f"You've completed the quiz!\nYour final score was: {quiz.score}/{quiz.question_number}")
