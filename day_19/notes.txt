@@ -1,0 +1,48 @@
+-Event listeners!
+--Specifically Turtle Event listeners!
+This basically is a thing where the program 'listens' for keyboard input and then does something based on that input.
+
+So with turtle and python, here's a short example program:
+
+from turtle import Turtle, Screen
+turt = Turtle() # Mario crushes turts
+screen = Screen()
+def move_forwards():
+    turt.forward(10)
+screen.listen() # now we're listening!
+screen.onkey(key="space", fun=move_forwards)
+screen.exitonclick()
+
+And with this, when we press space, we move forwards. And if we really want we can move all around with simply:
+
+def move_forwards():
+    turt.forward(10)
+
+def move_backwards():
+    turt.backward(10)   
+
+def turn_left():
+    turt.left(10)
+
+def turn_right():
+    turt.right(10)
+
+def clear_screen():
+    screen.clear_screen()
+
+screen.listen() # now we're listening!
+screen.onkey(key="Up", fun=move_forwards)
+screen.onkey(key="Down", fun=move_backwards)
+screen.onkey(key="Left", fun=turn_left)
+screen.onkey(key="Right", fun=turn_right)
+screen.onkey(key="c", fun=clear_screen)
+screen.exitonclick()
+
+
+The main thing that this part of the course emphasizes is that you can have different instances of a class doing different things -
+Their states can be different and they can act completely differently from each other.
+The whole point of a class is to make class objects that all can use aspects of a class but can be totally different.
+We use the Turtle class for this in this day of lessons.
+This whole concept is why object-oriented programming is so powerful - we orient all our code around using these objects.
+So all the code creates objects, then we adjust the objects, and then they do new, novel things, with the interaction of 
+the adjusted objects and the way we use them. No need to reinvent the wheel :)

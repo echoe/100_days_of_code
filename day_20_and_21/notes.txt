@@ -1,0 +1,53 @@
+This is where we get into inheritance! You can define a class that inherits features of another class.
+after the name of the class, just provide the class we want to inherit from:
+
+class Fish(Animal):
+    def __init__(self):
+        super().__init__() < initializes the animal class in the fish class.
+
+
+So EG:
+
+class Animal:
+    def __init__(self):
+        self.num_eyes = 2
+    def breath(self):
+        print("Inhale, exhale.")
+
+class Fish:
+    def swim(self):
+        [rint("moving in water")]
+
+nemo = Fish()
+nemo.swim()
+
+If I want the Fish to inherit all the features of Animal, I just need to do this:
+
+class Fish(animal):
+    def __init__(self):
+        super().__init__()
+
+    def swim(self):
+        [rint("moving in water")]
+
+And now I can:
+
+nemo = Fish()
+nemo.swim()
+nemo.breathe()
+print(nemo.num_eyes)
+
+To modify functions from the existing class, you can get a hold of the super class, and call it in the new class.
+
+class Fish(animal):
+    def __init__(self):
+        super().__init__()
+
+    def swim(self):
+        [rint("moving in water")]
+    
+    def breathe(self):
+        super().breathe()
+        print("and we are underwater wow!")
+
+The call to super() in the initializer is recommended but /not required/.
