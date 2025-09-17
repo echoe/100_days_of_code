@@ -1,0 +1,1 @@
+This is my attempt to make pong, the lesson of day 22, without going through any of the teaching part of day 22. It generally works!

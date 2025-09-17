@@ -1,0 +1,33 @@
+The eight TODOS:
+-Create the screen
+-Create and move a paddle
+-Create a second paddle
+-Create the ball, make it move
+-Detect collision with wall and bounce
+-Detect collision with paddle
+-Detect when paddle misses
+-Keep score
+
+Mine were:
+
+[I skipped the screen part.]
+-First: we want to code up the paddles. 'Make a paddle appear on the screen.'
+Then, 'Make the paddle move up and down'
+Then, 'Make another paddle on the other side'
+
+Then, 'Make a ball move across the screen with some physics'
+Then, 'Make the ball detect collision on the edges of the screen'
+Then, 'Make the ball detect collision on paddles'
+
+Then, 'Make the score change when the ball passes a paddle, and reset the game to play again, until you get to 7'
+
+Then, 'Make the other paddle move depending on where the ball is'
+-We want to code up collision on the paddles
+-We want to code up the scoreboard
+-We want to code up the ball
+-Then, finally, we code up the evil paddle.
+
+The main pong game was coded much clearer generally -
+I still think too much in if statements and should pause and figure out better ways to do what I'm looking at -
+but I did include a robot player which is something :) and my implementation does work!
+Pretty good, in the end.
