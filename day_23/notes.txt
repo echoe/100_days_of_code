@@ -1,0 +1,15 @@
+There were three 'levels' of hard for this: expert was 'do it by yourself', 
+hard was 'do it with the breakdown of what you should make', and medium was 'follow all the instructions'.
+
+I elected to do hard because a lot of what I'm doing here is not just figuring out merely /how/ to write code that works
+(I could've written this code at the beginning of the class after reading the turtle documentation).
+It's to learn how to do it the "right way" - clearly, with clean code that's easily readable and reusable, and quickly.
+
+After watching the walkthrough I'm pretty happy with it! Did everything /close enough/ to what was expected.
+Differences:
+-I made the cars precisely once every 6 cycles, instead of using a random integer to do it.
+-I made a 'collision' function in the car manager instead of doing it in the main.py.
+-I used the trick that we used in the last day (making the refresh rate faster, 
+ which increases the speed of everything) instead of making the cars faster themselves.
+-I did also have two variables tracking the count per run. Three if you count the internal scoreboard one. Oops.
+-The provided font in the starter code is different from the font in the finished program for some reason? Weird.
