@@ -10,3 +10,4 @@ dependencies:
     - prettytable
     - requests
     - colorgram.py
+    - pandas
