@@ -12,7 +12,7 @@ Hi. I know it looks a bit weird doing this sort of thing when I have seven years
 
 ### Caveats
 
-I am doing every day of this course, but likely will not upload every day - just when the result feels important.
+I am doing every day of this course, but likely will not upload every day - just when the result feels important. (The first ten days felt so basic that I didn't save any of it, but I did make physical notes. Also, my printer ran out of ink so I have to take computer notes now, haha.)
 
 I also:
 -Have a few days of vacation scheduled in the middle of taking this course and am making myself take this one day at a time so I actually retain the information, so will not have output every single day until the course ends.

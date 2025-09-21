@@ -1,0 +1,131 @@
+"""Lists and dictionaries"""
+#Things to report to the course: the slide here (at 2:30 of lecture 197) has new_list.append in the wrong indentation :|
+List comprehension: make a new list from a previous list! ... I did not know about this.
+new_list = [new_item for item in list]
+So if your code is:
+numbers = [1,2,3]
+new_list = []
+for n in list:
+    add_1 = n + 1
+    new_list.append(add_1)
+    
+You can instead write:
+numbers = [1,2,3]
+new_list = [n + 1 for n in numbers]
+
+This is maybe solving the 'problem of the day immediately' but here is my console work:
+
+>>> numbers = [1,2,3]
+>>> new_numbers = [n+1 for n in numbers]
+>>> print(new_numbers)
+[2, 3, 4]
+>>> name = "angela"
+>>> new_list = [n for n in name]
+>>> print(new_list)
+['a', 'n', 'g', 'e', 'l', 'a']
+>>> dict = {"a":"A", "n":"no", "g": "gee", "e": "ell", "l": "laugh"}
+>>> new_list_dict = [dict[n] for n in name]
+>>> print(new_list_dict)
+['A', 'no', 'gee', 'ell', 'laugh', 'A']
+>>> num_list = range(1,5)
+>>> num_list_edit = [n * 2 for n in num_list]
+>>> print(num_list_edit)
+[2, 4, 6, 8]
+>>>
+You can also add a test! EG:
+new_list = [new_item_function for item in list if test_passes]
+>>> names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+>>> short_names = [name for name in names if len(name) < 4]
+>>> print(short_names)
+[]
+>>> short_names = [name for name in names if len(name) < 5]
+>>> print(short_names)
+['Alex', 'Beth', 'Dave']
+
+Data overlap coding exercise because it's interesting:
+With some for loops, this is the first way I did it, it's the way I would automatically do it:
+file1nums=[]
+file2nums=[]
+with open("file1.txt") as file1:
+    for line in file1.readlines():
+        file1nums.append(int(line))
+with open("file2.txt") as file2:
+    for line in file2.readlines():
+        file2nums.append(int(line))
+
+
+result = [file1num for file1num in file1nums if file1num in file2nums]
+
+print(result)
+
+But you can list comprehension the whole thing, and it's much simpler:
+with open("file1.txt") as file1:
+    file1nums = [int(line) for line in file1.readlines()]
+with open("file2.txt") as file2:
+    file2nums = [int(line) for line in file2.readlines()]
+
+result = [file1num for file1num in file1nums if file1num in file2nums]
+
+print(result)
+
+in the code yesterday there's something primed for list comprehension, so here's that example in code:
+while len(guessed_states) < 50:
+    answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?").title()
+    if answer_state == "Exit":
+        states_to_learn = []
+        for state in all_states:
+            if state not in guessed_states:
+                states_to_learn.append(state)
+        new_data = pandas.DataFrame(states_to_learn)
+        new_data.to_csv(OUTPUT_FILE)
+        break
+
+So we can change this to:
+
+while len(guessed_states) < 50:
+    answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?").title()
+    if answer_state == "Exit":
+        states_to_learn = [state for state in all_states if state not in guessed_states]
+        new_data = pandas.DataFrame(states_to_learn)
+        new_data.to_csv(OUTPUT_FILE)
+        break
+
+We can also do a similar thing with dictionary comprehension!!!
+new_dict = {new_key:new_value for item in list}
+new_dict = {new_key:new_value for (key, value) in dict.items()}
+
+>>> names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+>>> import random
+>>> students_score = {name:random.randint(0,100) for name in names}
+>>> print(students_score)
+{'Alex': 8, 'Beth': 59, 'Caroline': 65, 'Dave': 89, 'Eleanor': 28, 'Freddie': 81}
+>>> passed_students = {student for (student,score) in students_score.items() if score > 60}
+>>> print(passed_students)
+{'Freddie', 'Dave', 'Caroline'}
+You can also pass the score along, in any way a dictionary can be created, e.g.:
+>>> passed_students = {(student,score) for (student,score) in students_score.items() if score > 60}
+>>> print(passed_students)                                                                         
+{('Caroline', 65), ('Freddie', 81), ('Dave', 89)}
+>>> passed_students = {student:score for (student,score) in students_score.items() if score > 60}  
+>>> print(passed_students)
+{'Caroline': 65, 'Dave': 89, 'Freddie': 81}
+>>>
+
+
+Extending this just a little further:
+You can basically consider a pandas dataframe as a dictionary. so:
+
+import pandas
+student_dict = {
+    "student": ['Alex', 'Beth', 'Caroline'],
+    "score": ['40', '50', '60']}
+student_data_frame = pandas.DataFrame(student_dict)
+
+pandas function: iterrows() loops through rows instead of columns[!]
+for (index, row) in student_data_frame.iterrows():
+    print(index)
+    print(row)
+    if row.student = Alex:
+        print(row.score)
+
+so if you want to combine both:
