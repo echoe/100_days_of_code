@@ -1,0 +1,45 @@
+GUIS with TKinter! Wowee Zowee.
+
+(Bla bla bla, they replaced consoles for the vast majority of computer users.)
+
+Advanced python:
+def argument(a, b, c)
+def argument(a=1, b=1, c=1) < functions with default values. I thought we'd already done this but maybe we didn't?
+
+You can accept infinite argmnents with *paramname! Like, if you want to add an infinite # of inputs you can:
+
+def function(*args):
+    result = 0
+    for n in args:
+        result += n
+    return result
+
+These are positional arguments. You've also got keyword arguments (**kwargs)! these are passed in as a dictionary to the function.
+def calculate(**kwargs):
+    print(kwargs)
+
+calculate(add=3, multiply=5)
+
+More ways to deal with arguments, like this:
+
+def calculate(n, **kwargs):
+    """You can handle these kwargs in so many ways"""
+    print(kwargs)
+    n += kwargs["add"]
+    n *= kwargs["multiply"]
+    print(n)
+
+calculate(2, add=3, multiply=5)
+
+
+With tkinter you can get options "in three ways". You have the keyword args, but you can also:
+-treat the option name as a directory index
+-use the config method to update attributes
+Examples:
+example=Button(self, fg="red", bg="blue")
+example["fg"]="red"
+example.config(fg="red)
+
+They provide a whole python file of examples in Other_Tkinter_Widgets as well.
+
+I would want, I think, the layout of all of the parts of my tkinter project to happen at the bottom so I can organize them easily that way.
