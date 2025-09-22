@@ -1,5 +1,4 @@
 """Lists and dictionaries"""
-#Things to report to the course: the slide here (at 2:30 of lecture 197) has new_list.append in the wrong indentation :|
 List comprehension: make a new list from a previous list! ... I did not know about this.
 new_list = [new_item for item in list]
 So if your code is:
