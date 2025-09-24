@@ -1,0 +1,74 @@
+"""Today is error handling day! Finally :D
+Various errors:"""
+# FileNotFoundError
+# with open("a_file.txt") as file:
+#     file.read()
+
+# #KeyError
+# a_dictionary = {"key":"value"}
+# value = a_dictionary["nonexistant_key"]
+
+# IndexError
+# fruit_list=["apple","banana","pear"]
+# fruit=fruit_list[3]
+
+# TypeError
+# text = "abc"
+# print(text + 5)
+
+# To fix an error, you wrap it in a try/except block, like:
+
+# # FileNotFoundError
+# try:
+#     with open("a_file.txt") as file:
+#         file.read()
+# except: #If this breaks we pass. But this makes the code do nothing
+#     print("There was an error :(")
+
+# #We can fix it like this:
+# try:
+#     with open("a_file.txt") as file:
+#         file.read()
+# except: #If this breaks, it's because there's nothing there and we should make the file
+#     file = open("a_file.txt", "w")
+#     file.write("Something")
+
+# #But the error is too broad, we should really catch the specific type of exception
+# try:
+#     with open("a_file.txt") as file:
+#         file.read()
+# except FileNotFoundError: #If this breaks, it's because there's nothing there and we should make the file
+#     file = open("a_file.txt", "w")
+#     file.write("Something")
+
+# #And we can stack exceptions:
+# try:
+#     file = open("a_file.txt")
+#     a_dictionary = {"key": "value"}
+#     print(a_dictionary["not_a_key"])
+# except FileNotFoundError: #If this breaks, it's because there's nothing there and we should make the file
+#     file = open("a_file.txt", "w")
+#     file.write("Something")
+# except KeyError as error_message: #We can also of course print out the exact error by naming it like this
+#     print(f"The key {error_message} does not exist.")
+# else: #if you try and it has no exceptions ...
+#     content=file.read()
+#     print(content)
+# finally: #At the end of the loop regardless of any other circumstances ...
+#     file.close()
+
+# #And we can raise an exception!
+
+# raise TypeError("This is an error that I made up.")
+
+height = float(input("Height: "))
+weight = float(input("Weight: "))
+
+if height > 3:
+    raise ValueError("That's not right")
+
+bmi = weight / height ** 2
+print(bmi)
+#That's weird if you're over 3 meters what. Error time. So we catch it above!
+
+# And from here we corrected two old programs, which I have copied into this folder.
