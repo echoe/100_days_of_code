@@ -3,7 +3,11 @@ import smtplib
 import random
 import datetime as dt
 ##################### Extra Hard Starting Project ######################
-"""Above: required imports. Below: parts of the stuff we walked through earlier in the day."""
+"""Above: required imports. Below: parts of the stuff we walked through earlier in the day.
+It looks like the official solution had a dictionary comprehension, but I just matched the month and day with an if line.
+Watching the official walkthrough I think this is pretty good, though, since you need to use the rest of the row if you send.
+The parts of the puzzle that are listed as things you have to do are left in the codebase for clarity.
+I did, perhaps, overuse constants ... but I would rather err that way than the other."""
 
 # Constants
 SMTP_URL="smtp.gmail.com" #Gmail's SMTP server.
@@ -45,6 +49,4 @@ for row in birthdays.iterrows():
         with open(letter) as birthday_letter:
             letter_contents = birthday_letter.read()
         letter_contents = letter_contents.replace("[NAME]",row[1]['name'])
-        # print(letter_contents)
-        # print(f"We hit the day with {row[1]['name']}!")
-        mock_email(SMTP_URL,USERNAME,PASSWORD,EMAIL,RECIPIENT,"Subject:Happy Birthday!\n\n"+letter_contents)
+        mock_email(SMTP_URL,USERNAME,PASSWORD,row[1]['email'],RECIPIENT,"Subject:Happy Birthday!\n\n"+letter_contents)
