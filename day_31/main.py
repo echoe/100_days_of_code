@@ -19,7 +19,7 @@ current_card = {}
 # Step 2, handling the cards #
 
 def next_card():
-    """Draws a new card and updates words_to_learn.csv."""
+    """Draws a new card."""
     global current_card, flip_timer
     window.after_cancel(flip_timer)
     current_card = random.choice(to_learn)
@@ -29,7 +29,7 @@ def next_card():
     flip_timer = window.after(3000, func=flip_card)
 
 def is_known():
-    """Remove the current card from the list and save the updated CSV to the CSV_FILE location."""
+    """Remove the current card from the list and save the updated CSV to the CSV_FILE location, then draws a new card."""
     to_learn.remove(current_card)
     pandas.DataFrame(to_learn).to_csv(LEARNING_FILE, index=False)
     next_card()

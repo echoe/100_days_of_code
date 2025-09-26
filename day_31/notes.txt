@@ -15,3 +15,4 @@ My code ... works but was much messier than the main code. I didn't fully know a
 But it did work.
 ...
 Anyways. More to study!!
+I did make a 'fixed' version of my first version that looks much, much better, at least!
