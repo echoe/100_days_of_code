@@ -1,0 +1,17 @@
+Intermediate capstone!:
+-A flash card program. This will "help you learn languages"
+(I am so bad at learning languages, lol. I doubt. But it will help other people, and maybe if I learn other stuff)
+
+It looks like this will be in steps:
+-Step 1: create the GUI [with tkinter]
+--Pretty straightforwards. The main.py they provide gave us the background image, and everything else was pretty straightforwards/covered in the previous lessons.
+--I did find out about the bd option, which flattens out the buttons! I like the look of that a lot. YMMV.
+-Step 2: Create new flash cards
+-Step 3: Flip the cards
+-Step 4: Save your progress in the stack of flip cards
+
+
+My code ... works but was much messier than the main code. I didn't fully know about itemconfig and ended up deleting and remaking things.
+But it did work.
+...
+Anyways. More to study!!
