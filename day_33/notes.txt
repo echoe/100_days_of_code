@@ -1,0 +1,6 @@
+This is the API lesson!!
+Won't work too much longer now since the whole project we make here is tracking the ISS ... I guess we can track it in the ground maybe lol.
+This is most of what I've done in my career with python, pulling information from APIs and uploading to APIs ... so a nice simple lesson haha.
+And we're using requests, haha :)
+http://open-notify.org/Open-Notify-API/ISS-Location-Now/ Here's the ISS API documentation.
+https://www.latlong.net/#google_vignette Also this website to find your latitude and longitude!
