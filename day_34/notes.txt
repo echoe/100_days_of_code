@@ -1,0 +1,23 @@
+A trivia app! This does not seem markedly different from the quiz app ... I suppose it's to expand the quiz app haha.
+... But I already did most of this during the actual quiz app day, on day 17. Wellp.
+I guess the tkinter review/repetition is good!!
+
+-html unescape is pretty cool, good to know at least too.
+It's interesting how the teacher of this course wants us to not just text parse in main too ...
+
+I finally get how to wrap text in a tkinter canvas object!!! That's something!!
+Differences:
+-I used 'scorelabel' and not 'score_label', oops. Still gotta iron out my pep-8 adherence.
+-I named my question text 'canvas_text' and had a second self.question_text object with just a pure string in it.
+-Also did this with the score text, haha.
+-Different amounts of padding.
+-I made the true and false img things objects within the class.
+
+But generally it looked better than two weeks ago! #progress
+
+I did not know that you can import a class type and then ensure that you're recieving a specific type of class in a class declaration!!! That's really nice!
+You can declare a variable just as a datatype. I knew this but don't really use it much, nice to see it and it really checks out with the class declaration part. Nice
+
+Fair amount of things we needed to update with the quiz brain to get them to all pipe properly into the UI class here!
+
+Lots of good knowledge to have :) I added the total # of questions you've taken yet as well from the quiz brain, but glad to see this actually was a lesson, haha.
