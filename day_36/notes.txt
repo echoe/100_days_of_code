@@ -1,0 +1,2 @@
+Stock news monitoring project!
+This went fine but ... sigh. Using concatination is a bit rough.

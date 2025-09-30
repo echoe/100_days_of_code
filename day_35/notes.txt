@@ -2,3 +2,4 @@ More API stuff, we're going over authenticating ourselves to API endpoints, but 
 Mostly I did the work here in main.py . I did skip the export part because I've just done that /so/ much 
 (and also I would rather hold environment variables in something like AWS Secrets Manager).
 Instead I wiped the information manually. Glad they talked about security. :)
+... Also this json viewer https://jsonviewer.stack.hu/ is nice? heh. though I suppose I could use any.
